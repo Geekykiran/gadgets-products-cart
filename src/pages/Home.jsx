@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useProducts } from "../context/ProductContext";
 import ProductCard from "../components/ProductCard";
 import { motion } from "framer-motion";
 
@@ -19,16 +18,11 @@ const cardVariants = {
 };
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    // axios.get("http://localhost:5000/products").then((res) => setProducts(res.data)); //use this for localhost server
-    axios.get("https://json-server-products-tuej.onrender.com/products").then((res) => setProducts(res.data));
-  }, []);
+  const { products } = useProducts();
 
   return (
     <motion.div
-      className="p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10"
+      className="p-10 sm:p-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 bg-gradient-to-br from-[#1f2937] via-[#111827] to-[#0f172a] min-h-screen"
       variants={containerVariants}
       initial="hidden"
       animate="show"
@@ -37,11 +31,15 @@ const Home = () => {
         <motion.div
           key={p.id}
           variants={cardVariants}
-          whileHover={{ scale: 1.03 }}
+          whileHover={{
+            scale: 1.05,
+            y: -5,
+            transition: { type: "spring", stiffness: 300 },
+          }}
+          className="rounded-xl shadow-xl bg-white/10 backdrop-blur-md border border-white/20 p-2 transition duration-300 hover:shadow-2xl"
         >
           <ProductCard product={p} />
         </motion.div>
-
       ))}
     </motion.div>
   );

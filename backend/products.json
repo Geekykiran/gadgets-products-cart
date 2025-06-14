@@ -3,7 +3,7 @@
     {
       "id": "1",
       "title": "Wireless Headphones",
-      "price": 1499,
+      "price": "1599",
       "image": "https://cdn.pixabay.com/photo/2018/09/17/14/27/headphones-3683983_640.jpg"
     },
     {
@@ -50,8 +50,8 @@
     },
     {
       "id": "9",
-      "title": "Portable Charger 10000mAh",
-      "price": 1099,
+      "title": "Portable Charger 30000mAh",
+      "price": "1899",
       "image": "https://imgs.search.brave.com/fYHMMfZS7yfWPyO2kViq5XDyuMZai3S5GYy1j8nnP6g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFrS0tWb2N1QUwu/anBn"
     },
     {
@@ -59,6 +59,18 @@
       "title": "Smartphone Tripod",
       "price": 899,
       "image": "https://imgs.search.brave.com/CmL5iYqxJuJkXFG2cxw5mrOVcmHHDfrh5EkSjIQHKes/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L05m/M3NmcWU1dHlFaVNv/UlY2MlFzQVguanBn"
+    },
+    {
+      "id": "027d",
+      "title": "as",
+      "price": "1500",
+      "image": "sa"
+    },
+    {
+      "id": "f09a",
+      "title": "sdsd",
+      "price": "1500",
+      "image": "kjkd"
     }
   ]
 }

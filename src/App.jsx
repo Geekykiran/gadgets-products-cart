@@ -10,6 +10,8 @@ import CartPage from "./pages/CartPage";
 import AddProductPage from "./pages/AddProductPage";
 import Navbar from "./components/Navbar";
 import { Toaster } from "react-hot-toast";
+import ManageProducts from "./components/ManageProducts";
+import EditProductPage from "./pages/EditProductPage";
 
 const Layout = () => (
   <>
@@ -28,12 +30,20 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/cart',
-        element: <CartPage />,
-      },
-      {
         path: '/add-product',
         element: <AddProductPage />,
+      },
+      {
+        path: '/manage-products',
+        element: <ManageProducts />
+      },
+      {
+        path: '/manage-products/edit/:id',
+        element: <EditProductPage />
+      },
+      {
+        path: '/cart',
+        element: <CartPage />,
       },
     ],
   },

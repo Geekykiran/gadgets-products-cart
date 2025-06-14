@@ -7,36 +7,34 @@ const ProductCard = ({ product }) => {
   const handleAddToCart = () => {
     addToCart(product);
 
-    // setTimeout(() => {
-      const qty = getQuantity(product.id);
-      toast.success(`${product.title} Qty: ${qty} added to cart`, {
-        icon: '🛒',
-        style: {
-          borderRadius: '8px',
-          background: '#333',
-          color: '#fff',
-          padding: '12px 16px',
-        },
-      });
-    // }, 200);
+    const qty = getQuantity(product.id);
+    toast.success(`${product.title} Qty: ${qty} added to cart`, {
+      icon: '🛒',
+      style: {
+        borderRadius: '8px',
+        background: '#333',
+        color: '#fff',
+        padding: '12px 16px',
+      },
+    });
   };
 
   return (
-    <div className="group p-4 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.25)] bg-white transition-transform duration-300">
-      <div className="w-full h-48 overflow-hidden rounded-xl">
+    <div className="group p-5 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_15px_60px_rgba(0,0,0,0.4)] transition-transform duration-300 hover:scale-[1.02]">
+      <div className="w-full h-48 overflow-hidden rounded-xl bg-gradient-to-tr from-[#1f2937] to-[#0f172a] flex items-center justify-center">
         <img
           src={product.image}
           alt={product.title}
-          className="w-full h-full object-contain scale-140 group-hover:scale-100 transition-transform duration-500 ease-in-out"
+          className="w-32 h-32 object-contain transform transition-transform duration-500 scale-350 group-hover:scale-260"
         />
       </div>
 
-      <h3 className="text-lg font-semibold mt-3 text-gray-900">{product.title}</h3>
-      <p className="text-indigo-600 font-semibold text-base mt-1">₹{product.price}</p>
+      <h3 className="text-base font-semibold mt-4 text-white truncate">{product.title}</h3>
+      <p className="text-[#00FFA3] font-bold text-lg mt-1">₹{product.price}</p>
 
       <button
         onClick={handleAddToCart}
-        className="mt-3 px-5 py-2 rounded-lg font-medium bg-indigo-600 text-white transition-colors duration-300 hover:bg-indigo-700"
+        className="mt-4 px-5 py-2 rounded-lg font-medium bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-md hover:shadow-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-300"
       >
         Add to Cart
       </button>
