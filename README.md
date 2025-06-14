@@ -47,10 +47,12 @@ json-server-products/
 ## 🔧 API Endpoints
 
 | Method | Endpoint           | Description          |
-|--------|--------------------|---------------------|
-| GET    | `/products`        | Fetch all products  |
-| GET    | `/products/:id`    | Fetch single product|
-| POST   | `/products`        | Add a new product   |
+|--------|--------------------|----------------------|
+| GET    | `/products`        | Fetch all products   |
+| GET    | `/products/:id`    | Fetch single product |
+| POST   | `/products`        | Add a new product    |
+| PUT    | `/products/:id`    | Update a product     |
+| DELETE | `/products/:id`    | Delete a product     |
 
 ---
 
@@ -90,7 +92,7 @@ npm install
 ```bash
 npm start
 ```
-The backend will run on [http://localhost:8080](http://localhost:8080)
+The backend will run on [http://localhost:8080](http://localhost:8080).
 
 Or use the hosted backend: [https://json-server-products-tuej.onrender.com/products](https://json-server-products-tuej.onrender.com/products)
 
@@ -101,7 +103,7 @@ cd frontend
 npm install
 npm run dev
 ```
-The frontend will run on [http://localhost:5173](http://localhost:5173)
+The frontend will run on [http://localhost:5173](http://localhost:5173).
 
 ---
 
